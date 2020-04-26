@@ -51,6 +51,8 @@ namespace DatingApp.API.Controllers
 		//  var publicKey = Convert.ToBase64String(keyRsa.Rsa.ExportRSAPublicKey());
         //  var privateKey = Convert.ToBase64String(keyRsa.Rsa.ExportRSAPrivateKey());
 
+               //throw new Exception("Error server");
+
                 var  userFromRepo = await _repo.Login(userLoginDto.UserName.ToLower(), userLoginDto.Password);
 
                 if(userFromRepo == null)
